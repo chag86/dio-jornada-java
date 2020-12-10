@@ -1,7 +1,5 @@
 package br.com.chagas.collections;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -37,8 +35,6 @@ public class ExemploLinkedList {
         logger.info("Cliente da vez e que NÃO é removido da fila: {}", primeiroCliente);
         
         logger.info(LOG1, filaBanco);
-        
-        //filaBanco.clear();
 
         String primeiroClienteOuErro = filaBanco.element();
 
@@ -54,7 +50,8 @@ public class ExemploLinkedList {
         
        
         while (iterator.hasNext()) {
-            logger.info("Cliente [while] --->{}",iterator.next());
+            String cliente = iterator.next();
+            logger.info("Cliente [while] --->{}", cliente);
         }
 
         logger.info("Tamanho --->{}", filaBanco.size());
