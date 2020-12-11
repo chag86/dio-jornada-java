@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 public class ExemploList {
 
     private static final Logger logger = LogManager.getLogger(ExemploList.class.getName());
-    private static final String ACTION_1 = "Valor da lista {}";  // Compliant
+    private static final String ACTION_1 = "Valor da lista {}";
     
     public static void main(String[] args) {
         List<String> nomes = new ArrayList<>();
