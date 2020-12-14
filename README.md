@@ -2,10 +2,6 @@
 
 ## Caminho 🏆
 
-<<<<<<< HEAD
-    - Strogonoff de frango.
-    - Patê de Frango.
-=======
     - Lógica de programação essencial;
     - Introdução ao Git e ao GitHub;
     - Fundamentos de Arquitetura de Sistemas;
@@ -32,4 +28,3 @@
     - Crie seu gerenciador de salas de reuniões com Java e Angular;
     - Aprenda a aplicar testes com Java;
     - Desenvolvimento de testes unitários para validar uma API REST de gerenciamento de estoque de cerveja;
->>>>>>> 1e3f1c96d3da0a464b97bc0cace8ba7368e76356
