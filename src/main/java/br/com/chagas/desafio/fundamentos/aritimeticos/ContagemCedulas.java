@@ -3,11 +3,14 @@ package br.com.chagas.desafio.fundamentos.aritimeticos;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 import java.util.StringTokenizer;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /*
 Desafio
@@ -40,18 +43,35 @@ Exemplo de Entrada	Exemplo de Saída
 */
 public class ContagemCedulas {
 
+    private static final Logger logger = LogManager.getLogger(ContagemCedulas.class.getName());
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
+        
+        Locale.setDefault(new Locale("pt", "BR"));
     
         int valor = Integer.parseInt(st.nextToken());
-        int[] cedulas = {100,50,20,10,5,2,1};
 
-        System.out.println(Arrays.stream(cedulas).filter(n->new BigDecimal(n))).reduce(Integer.valor, Integer::divide);
+        List<Integer> cedulas = new ArrayList<>();
+        cedulas.add(100);
+        cedulas.add(50);
+        cedulas.add(20);
+        cedulas.add(10);
+        cedulas.add(5);
+        cedulas.add(2);
+        cedulas.add(1);
+
+        Iterator<Integer> iterator = cedulas.iterator();
+        System.out.println(valor);
+        while(iterator.hasNext()){
+            Integer cedula = iterator.next();
+            Integer sub = valor / cedula;
+            System.out.printf("%d nota(s) de R$ %.2f\n",sub , Double.valueOf(cedula));
+            valor = valor - sub * cedula;
+        }
+          
+    }
 
 
-        
-
-
-    }    
 }
